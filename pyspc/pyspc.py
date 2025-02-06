@@ -107,7 +107,7 @@ class spc(object):
             return
 
         self.fig, *self.subplots = plt.subplots(num_layers, **kwargs)
-        self.fig.canvas.manager.canvas.set_window_title(self._title)
+        self.fig.canvas.manager.set_window_title(self._title)
 
         for layer, ax in zip(self.layers, self.get_subplots()):
             summary = {}
